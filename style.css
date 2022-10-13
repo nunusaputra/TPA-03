@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --primary-color: #fff;
+    --secondary-color: #111111 ;
+}
+body {
+    background-color: var(--primary-color);  
+    margin: 0;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #111;
+    padding: 13px 10%;
+    transition: 0.2s;
+    box-shadow: -3px -3px 7px #ffffff73,
+                  2px 2px 5px rgba(94, 104, 121, 0.288);
+}
+
+header.shadow {
+    box-shadow: 0 0 4px rgb(14 55 54 / 15%);
+}
+
+.logo {
+    font-size: 1.61rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.logo:hover {
+    color: lightblue;
+}
+
+input {
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--secondary-color);
+}
+
+.search {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    color: var(--primary-color);
+}
+
+.search:focus {
+    outline: 0;
+    background-color: var(--secondary-color);
+}
+
+.search:hover {
+    border: 2px solid lightblue;
+}
+
+.search::placeholder {
+    color: var(--primary-color);
+}
+
+main {
+    margin-top: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.movie {
+    width: 300px;
+    margin: 1rem;
+    border-radius: 10px;
+    box-shadow: 0.2px 4px 5px rgba(0, 0, 0, 0.1);
+    background-color: var(--secondary-color);
+    position: relative;
+    overflow: hidden;
+
+}
+.movie img {
+    width: 100%;
+}
+
+.movie-info {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+}
+
+.movie-info h3 {
+    margin-top: 0;
+}
+
+.movie-info span {
+    margin-top: -20px;
+    background-color: var(--primary-color);
+    padding: 0.2rem 0.5rem;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.date {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+    margin-top: -50px;
+}
+
+.movie-info span.green {
+    color: lightgreen;
+}
+
+.movie-info span.orange {
+    color: orange;
+}
+
+.movie-info span.red {
+    color: red;
+}
+
+.overview {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    padding: 1rem;
+    max-height: 100%;
+    transform: translateY(101%);
+    transition: transform 0.3s ease-in;
+}
+
+.movie:hover .overview {
+    transform: translateY(0);
+}
+
+.footer {
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    background: #fff;
+    color: #000;
+}
+  .footer h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.6rem;
+}
+
+.footer-01 {
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    background: #ebebeb;
+    color: #000;
+}
+
+.copyright {
+    padding: 20px;
+    background: var(--secondary-color);
+    text-align: center;
+    color: #fff;
+}
+
+.copyright a {
+    color: #fff;
+    font-weight: 800;
+}
+
+.social{
+	display: flex;
+}
+.social a{
+	width: 45px;
+	height: 45px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background:  var(--secondary-color);
+	border-radius: 50%;
+	margin: 22px 10px;
+	color: white;
+	text-decoration: none;
+	font-size: 20px;
+}
+.social a:hover{
+	transform: scale(1.3);
+	transition: .3s;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 550px) {
+    .logo {
+        font-size: 15px;
+    }
+
+    .search {
+        width: 100%;
+        padding: 5px 15px;
+        font-size: 10px;
+    }
+
+    .footer p {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .logo {
+        font-size: 10px;
+    }
+
+    .search {
+        width: 100%;
+        padding: 5px 5px;
+        font-size: 8px;
+        padding-left: 10px;
+    }
+
+    .footer p {
+        text-align: center;
+    }
+}
+
