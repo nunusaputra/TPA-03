@@ -211,6 +211,18 @@ main {
 
 /* Responsive */
 
+@media screen and (max-width: 1300px) {
+    main {
+        margin-top: 80px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    main {
+        margin-top: 80px;
+    }
+}
+
 @media screen and (max-width: 550px) {
     .logo {
         font-size: 15px;
@@ -224,6 +236,10 @@ main {
 
     .footer p {
         text-align: center;
+    }
+
+    main {
+        margin-top: 50px;
     }
 }
 
@@ -241,6 +257,10 @@ main {
 
     .footer p {
         text-align: center;
+    }
+
+    main {
+        margin-top: 50px;
     }
 }
 
